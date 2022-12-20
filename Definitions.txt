@@ -1,0 +1,128 @@
+For Loop:
+
+When we have large number of data and we have to go through them, we use a for loop for it. Here the number of iterations is known to us.
+
+for loop consist of 3 parameters: The initial condtion, the test condtion and the increment condtion each of them separated by a semicolon.
+
+It is represented as
+
+	for(int i=0;i<=some condition;i++){
+	
+	//code snippet
+	
+	}
+	
+------------------------------------------------------------
+While Loop:
+
+When we have large number of data and we have to go through them, we use a for loop for it. Here the number of iterations is not known to us.
+
+We tell the machine that until as particular condition is not satisfied, we must run the loop as the 
+
+	while(condition) {
+	
+	//code snippet
+	
+	
+-------------------------------------------------------------
+
+Continue:
+
+Continue is used in loop to immediately jump to the next iteration of the loop without executing the loop completely, only till the keyword.
+
+It can be used in for or while.
+
+for(int i=0;i<=some condition;i++){
+
+	//code snippet(1)
+
+		continue;
+	
+	//code snippet(2)
+	
+}
+
+Here, after (1) the keyword jumps to next iteration immediately. It will not go to (2)
+
+--------------------------------------------------------------
+
+If, Else:
+
+An if else statement is a conditional statement that runs a set of statements depending on whether an expression is true or false.
+
+if(condition){
+
+//code snippet(1)
+
+}
+else{
+
+//code snippet(2)
+
+}
+
+Here the machine checks the condition written beside if keyword.
+
+If the condition is true, the it will implement (1). 
+But if it is false, it will implement (2).
+
+-------------------------------------------------------------------
+
+Switch:
+
+Switch statement executes one statement from multiple conditions.
+If any of the statement does not matches with the expression(key) sent, it goes to default key in it.
+
+
+switch(expression){    
+case value1:    
+   
+ //code
+case value2:    
+   
+ //code
+......    
+    
+default:     
+  code to be executed if all cases are not matched;  
+} 
+
+------------------------------------------------------------
+
+Recursion:
+
+Recursion is function calling itself.
+
+ int factorial(int n){    
+  if (n == 0)    
+    return 1;    
+  else    
+    return(n * factorial(n-1));    
+ } 
+ 
+ Here as we can see, in the else condition, the function is calling itself to implement the function.
+ In recursion a new stack frame is made everytime the function is called.
+ In case of infinte recursion stack overflow can take place.
+ 
+--------------------------------------------------------------------
+ 
+Binary search tree:
+ 
+Binary Search Tree is a node-based binary tree data structure.
+
+The left subtree of a node contains nodes with keys lesser than the node’s key.
+The right subtree of a node contains nodes with keys greater than the node’s key.
+
+
+-----------------------------------------------------------------
+Closure:
+
+
+A closure is a function having access to the parent scope, even after the parent function has closed.
+
+const add = (function () {
+  let counter = 0;
+  return function () {counter += 1; return counter}
+})();
+
+add();

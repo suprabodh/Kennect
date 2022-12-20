@@ -1,0 +1,23 @@
+const num = 12;
+var ogNum = num;
+
+function isPrimeNo(num)
+{
+    if (num <= 1)
+        return false;
+  
+    for (let i = 2; i < num; i++)
+        if (num % i == 0)
+            return false;
+  
+    return true;
+}
+
+const nextPrime = (num = 1) => {
+   while(!isPrimeNo(++num)){
+   };
+   return num;
+};
+
+console.log(nextPrime(num)-ogNum);
+console.log(isPrimeNo(num))
